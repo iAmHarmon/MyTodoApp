@@ -14,7 +14,9 @@
     },
     "categories": {
       "auth": {
-        "mytodoapp5d96bd5f": {}
+        "mytodoapp5d96bd5f": {
+          "googleClientId": "48806801291-ed0p1gkq7qv9cc3c002m6djsjkrdn0tb.apps.googleusercontent.com"
+        }
       },
       "function": {
         "mytodoapp5d96bd5fPostConfirmation": {
