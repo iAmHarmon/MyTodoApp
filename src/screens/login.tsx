@@ -1,10 +1,14 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
-export const ListScreen = () => {
-  return (
-    <View>
-      <Text>"Login Screen"</Text>
-    </View>
-  );
-};
+export const LoginScreen = ({ navigation }) => (
+  <View>
+    <Text>"Login Screen"</Text>
+    <Button
+      title="Go to list"
+      onPress={() => {
+        navigation.navigate('List');
+      }}
+    />
+  </View>
+);
