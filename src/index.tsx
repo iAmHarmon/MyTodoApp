@@ -1,14 +1,21 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { NavigationContainer } from '@react-navigation/native';
+import {
+  NavigationContainer,
+  useNavigationContainerRef,
+} from '@react-navigation/native';
+import { useReduxDevToolsExtension } from '@react-navigation/devtools';
 import { store } from './store/store';
-import App from './App';
+import { MainStack } from './navigation/MainStack';
 
 export default () => {
+  const navigationRef = useNavigationContainerRef();
+  useReduxDevToolsExtension(navigationRef);
+
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
       <Provider store={store}>
-        <App />
+        <MainStack />
       </Provider>
     </NavigationContainer>
   );
