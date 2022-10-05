@@ -1,3 +1,5 @@
+// @ts-ignore
+import { withAuthenticator } from 'aws-amplify-react-native';
 import React from 'react';
 import { Provider } from 'react-redux';
 import {
@@ -8,7 +10,7 @@ import { useReduxDevToolsExtension } from '@react-navigation/devtools';
 import { store } from './store/store';
 import { MainStack } from './navigation/MainStack';
 
-export default () => {
+const App = () => {
   const navigationRef = useNavigationContainerRef();
   useReduxDevToolsExtension(navigationRef);
 
@@ -20,3 +22,5 @@ export default () => {
     </NavigationContainer>
   );
 };
+
+export default withAuthenticator(App);
