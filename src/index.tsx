@@ -1,5 +1,4 @@
 // @ts-ignore
-import { withAuthenticator } from 'aws-amplify-react-native';
 import React from 'react';
 import { Provider } from 'react-redux';
 import {
@@ -23,4 +22,4 @@ const App = () => {
   );
 };
 
-export default withAuthenticator(App);
+export default App;
